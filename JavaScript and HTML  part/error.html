@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Division of 2 numbers</h1>
+Number 1: <input type="text" id="n1"><br /><br />
+Number 2: <input type="text" id="n2"><br /><br />
+<input type="button" value="Submit" onclick="calculate()">
+<br />
+
+
+<script type="text/javascript">
+function calculate()
+{
+var n1=document.getElementById('n1').value;
+var n2=document.getElementById('n2').value;
+if(n1=="")
+throw "Empty field 1";
+if(n2=="")
+throw "Empty field 2";
+if(isNaN(n1)) throw "not a number";
+if(isNaN(n2)) throw "not a number";
+if(n2==0)
+throw "Divide by zero error";
+try{
+if(n2==0)
+throw "Divide by zero error";
+else{
+var n3=n1/n2;
+alert("Result is: "+n3);
+}
+}
+catch(err) {
+alert("Error caught :  " + err);
+}
+}
+</script>
+
+</body>
+</html>

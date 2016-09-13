@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Employee Sales Quota</h2>
+Graeme Smith: <input type="text" id="gs"><br /><br />
+Dan Parsons: <input type="text" id="dp"><br /><br />
+Brendan Taylor: <input type="text" id="bt"><br /><br />
+<input type="button" name="submit" onclick="check()" value="Check"><br>
+<p id="a"></p>
+<p id="b"></p>
+<p id="c"></p>
+
+<script>
+function emp(first, last, id) {
+    this.firstName = first;
+    this.lastName = last;
+    this.id = id;
+
+}
+var Employee= {
+department:"sales",
+firstName:"",
+lastName:"",
+id:0
+};
+var diff,tot_sales;
+var SalesPerson={ quota:10
+};
+SalesPerson.__proto__=Employee;
+var emp1=new emp("Graeme","Smith",1000);
+emp1.__proto__=SalesPerson;
+var emp2=new emp("Dan","Parsons",1001);
+emp2.__proto__=SalesPerson;
+var emp3=new emp("Brendon","Taylor",1002);
+emp3.__proto__=SalesPerson;
+function check(){
+var gs=document.getElementById('gs').value;
+var dp=document.getElementById('dp').value;
+var bt=document.getElementById('bt').value;
+if(gs>=emp1.quota)
+{
+diff=gs-emp1.quota;
+tot_sales=diff*120;
+document.getElementById("a").innerHTML =
+" " + emp1.firstName+" "+emp1.lastName+"("+emp1.id+") has earned $"+tot_sales+" from the sales quota.";
+}
+else{
+document.getElementById("a").innerHTML =
+" " + emp1.firstName+" "+emp1.lastName+"("+emp1.id+") has not met the sales quota.";
+}
+if(dp>=emp2.quota)
+{
+diff=dp-emp2.quota;
+tot_sales=diff*120;
+document.getElementById("b").innerHTML =
+" " + emp2.firstName+" "+emp2.lastName+"("+emp2.id+") has earned $"+tot_sales+" from the sales quota.";
+}
+else{
+document.getElementById("b").innerHTML =
+" " + emp2.firstName+" "+emp2.lastName+"("+emp2.id+") has not met the sales quota.";
+}
+if(bt>=emp3.quota)
+{
+diff=bt-emp3.quota;
+tot_sales=diff*120;
+document.getElementById("c").innerHTML =
+" " + emp3.firstName+" "+emp3.lastName+"("+emp3.id+") has earned $"+tot_sales+" from the sales quota.";
+}
+else{
+document.getElementById("c").innerHTML =
+" " + emp3.firstName+" "+emp3.lastName+"("+emp3.id+") has not met the sales quota.";
+}
+}
+</script>
+</body>
+</html>

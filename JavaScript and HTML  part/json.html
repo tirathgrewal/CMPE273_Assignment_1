@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Information</h2>
+Enter the Student ID: <input type="text" id="ID"> <br />
+<input type="button" value="Submit" onclick="get()">
+<hr /><br /><br />
+
+<p id="p"></p>
+
+<script>
+function get(){
+var ide=document.getElementById('ID').value;
+var stud=[{
+    "id": "011401",
+    "name" : "Tirath Grewal",
+    "age" : "21",
+    "gender" : "Male",
+    "email" : "tirath.grewal@sjsu.edu",
+    "phone" : "408-645-4236",
+    "major" : "Software Engineering",
+    "subjects" : "CMPE 272, 273, 281"
+    
+},
+{
+    "id": "011402",
+    "name" : "Abhishek Sharma",
+    "age" : "24",
+    "gender" : "Male",
+    "email" : "abhishek.sharma@sjsu.edu",
+    "phone" : "408-612-4672",
+    "major" : "Software Engineering",
+    "subjects" : "CMPE 202, 272, 281"
+},
+{
+    "id": "011403",
+    "name" : "Rahul Goel",
+    "age" : "25",
+    "gender" : "Male",
+    "email" : "rahul.goel@sjsu.edu",
+    "phone" : "408-346-1292",
+    "major" : "Computer Engineering",
+    "subjects" : "CMPE 245, 206, 212"
+},
+{
+    "id": "011404",
+    "name" : "Sanjana Kaushik",
+    "age" : "22",
+    "gender" : "Female",
+    "email" : "sanjana.kaushik@sjsu.edu",
+    "phone" : "408-912-2312",
+    "major" : "Computer Science",
+    "subjects" : "CS 278, 201, 252"
+},
+];
+for(var i=0;i<stud.length;i++)
+{
+if(ide==stud[i].id)
+{
+document.getElementById("p").innerHTML =
+"Name: " + stud[i].name+ "<br>" +
+"Age: " + stud[i].age + "<br>" +
+"Gender: " + stud[i].gender + "<br>" +
+"Email: " + stud[i].email + "<br>" +
+"Phone No: " + stud[i].phone + "<br>" +
+"Major: " + stud[i].major + "<br>" +
+"Subjects Taken: " + stud[i].subjects;
+}}
+}
+</script>
+
+</body>
+</html>

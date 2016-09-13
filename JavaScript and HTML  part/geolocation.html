@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Distance to San Francisco from current location</h2>
+<button onclick="getLoc()">Get location</button>
+<button onclick="calculate()">Calculate</button>
+<p id="a"></p>
+<script>
+var s = document.getElementById("a");
+var a,b,dist;
+
+function getLoc() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } 
+}
+
+function showPosition(position) {
+    s.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+    a=position.coords.latitude;
+    b=position.coords.longitude;
+
+}
+function calculate()
+{
+dist=distance(a,b,37.733795,-122.446747);
+alert("Distance to San Francisco is: " + dist+ "miles.");
+}
+
+function distance(lat1,lon1,lat2,lon2) {
+  var R=6371; // radius of earth
+      var dLat=rad(lat2-lat1);
+      var dLon=rad(lon2-lon1);
+      var lat1=rad(lat1);
+      var lat2=rad(lat2);
+
+      var a=Math.sin(dLat/2)*Math.sin(dLat/2)+
+        Math.sin(dLon/2)*Math.sin(dLon/2)*Math.cos(lat1)*Math.cos(lat2); 
+      var c=2 *Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+      var d=R*c;
+      return d;
+    }
+    function rad(res) 
+    {
+        return res*Math.PI / 180;
+    }
+</script>
+
+</body>
+</html>

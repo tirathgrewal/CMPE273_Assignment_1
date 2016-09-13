@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Calculate Digit Sum</h1>
+Enter the Number: <input type="text" id="num"><br /><br />
+<input type="button" value="Submit" onclick="calculate()">
+<br />
+
+
+<script type="text/javascript">
+function calculate()
+{
+var n1=document.getElementById('num').value;
+if(n1=="")
+throw "Empty field 1";
+if(isNaN(n1)) throw "not a number";
+var dig,sum=0;
+while(n1!=0)
+{
+dig=n1%10;
+sum=sum+dig;
+n1=parseInt(n1/10);
+}
+alert(" Digit Sum of the number is: " +sum); 
+}
+</script>
+
+</body>
+</html>

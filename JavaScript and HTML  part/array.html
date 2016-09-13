@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to generate the attendance list</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="a"></p>
+
+<script>
+var names = ["Rahul","Jack","Danny","Mohit","Kajal","Britney","Gagan","Matthew","Abhishek"];
+
+
+function myFunction() {
+    names.sort();
+    document.getElementById("a").innerHTML = names;
+}
+</script>
+
+</body>
+</html>

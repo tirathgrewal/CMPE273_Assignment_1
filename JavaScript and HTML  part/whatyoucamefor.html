@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is what you came for</title>
+</head>
+<body>
+<h3>This Is What You Came For</h3>
+<img src="this.jpg" alt="This Is What You Came For" style="width:200px;height:150px;"> <br /> <br />
+Audio:
+<audio controls>
+  <source src="This Is What You Came For - Calvin Harris, Rihanna (128kbps).mp3" type="audio/mp3">
+</audio> <br />
+<button onclick="playPause()">Play/Pause</button>
+ <video id="vid" width="400" height="400">
+  <source src="Calvin_Harris_Ft_Rihanna_-_This_Is_What_You_Came_For_MusikUpdate.com.mp4" type="video/mp4">
+  </video>
+  <script>
+  var v=document.getElementById("vid");
+  function playPause(){
+  	if(v.paused)
+  		v.play();
+  	else
+  		v.pause();
+  }
+</script>
+</body>
+</html>

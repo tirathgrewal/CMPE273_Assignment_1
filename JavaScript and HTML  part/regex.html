@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Registration Page</h1>
+Username: <input type="text" id="name"><br /><br />
+Password: <input type="password" id="pass"><br /><br />
+<input type="button" value="Submit" onclick="check()">
+
+<script type="text/javascript">
+function check()
+{
+var username=document.getElementById('name').value;
+var password=document.getElementById('pass').value;
+if(username=="")
+alert("Username can't be blank");
+var patt1=/^\w+$/;
+var bool1=patt1.test(username);
+var patt2=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
+var bool2=patt2.test(password);
+if(!bool1)
+alert("Username should only contain letters,underscore and numbers.");
+else if(!bool2)
+alert("Passwords must contain at least six characters, including 1 uppercase, 1 lowercase letter and 1 number.");
+else
+alert("Registration Successful");
+
+
+}
+</script>
+
+</body>
+</html>

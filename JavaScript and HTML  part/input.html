@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<h2>Volunteer Registration Form for SJSU Department of Computer Engineering</h2>
+<body>
+
+<form action="save.html">
+Name: <input type="text" id="name" maxlength="20" placeholder="Enter your name" required autofocus> <br /> <br />
+Age: <input type="text" id="age" maxlength="2" placeholder="Enter your age"><br /> <br />
+School: <input type="text" id="sjsu" value="SJSU" readonly><br /> <br />
+Program: <input list="courses" placeholder="Choose a program">
+<datalist id="courses">
+  <option value="BS Computer Engineering">
+  <option value="BS Software Engineering">
+  <option value="MS Computer Engineering">
+  <option value="MS Software Engineering">
+</datalist> <br /> <br />
+Email: <input type="email" id="email" placeholder="Enter your email address" required><br /> <br />
+Phone No: <input type="text" id="phone" placeholder="Enter your phone number" pattern="([0-9]{3})[-]([0-9]{3})[-]([0-9]{4})" required> <br /> <br />
+  What time can you work? <input type="radio" name="time" value="morning"> Morning(9-12 PM) 
+  <input type="radio" name="time" value="afternoon"> Afternoon(12-4 PM)
+  <input type="radio" name="time" value="evening"> Evening(4-7 PM) <br />     <br />
+<input type="submit">
+</form>
+</body>
+</html>

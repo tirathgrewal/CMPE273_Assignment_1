@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function count() {
+    if(typeof(Storage) !=="undefined") {
+        if (localStorage.bodycount) {
+            localStorage.bodycount=Number(localStorage.bodycount)+1;
+        } else {
+            localStorage.bodycount=1;
+        }
+        document.getElementById("a").innerHTML="This page has been loaded " + localStorage.bodycount + " times.";
+    } 
+}
+</script>
+</head>
+<body onload="count()"></button></p>
+<p id="a"></p>
+</body>
+</html>

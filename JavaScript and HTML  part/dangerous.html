@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<title>Dangerous(Feat. Sam Martin)</title>
+</head>
+<body>
+<h3>Dangerous(Feat. Sam Martin)</h3>
+<img src="172.jpg" alt="Dangerous" style="width:200px;height:150px;"> <br /> <br />
+Audio:
+<audio controls>
+  <source src="David Guetta - Dangerous (feat.sam Martin) [freemp3.se].mp3" type="audio/mp3">
+</audio> <br />
+<button onclick="playPause()">Play/Pause</button>
+ <video id="vid" width="400" height="400">
+  <source src="Dangerous - David Guetta ft Sam Martin -HD Android-(MastiChor).mp4" type="video/mp4">
+  </video>
+  <script>
+  var v=document.getElementById("vid");
+  function playPause(){
+  	if(v.paused)
+  		v.play();
+  	else
+  		v.pause();
+  }
+</script>
+</body>
+</html>

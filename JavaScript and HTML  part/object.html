@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+   <html>
+   
+   <body>
+   Enter number of classes: <input type="text" id="cl"> <br />
+   <input type="button" value="Submit" onclick="load()">
+ <script type="text/javascript">
+     function load(){
+      var student = new Object();   
+     
+         student.name = "Rahul Sharma"; 
+         student.id  = 120911531;
+         student.attendance = document.getElementById('cl').value;
+         if(student.attendance>75)
+         {
+          alert("The student "+student.name+"("+student.id+")"+"has no attendance shortage and is allowed to sit for the examinations.");
+         }
+         
+  else
+         {
+          alert("The student "+student.name+"("+student.id+")"+"has attendance shortage and is not allowed to sit for the   examinations.");
+         }}
+         
+      </script></body></html>

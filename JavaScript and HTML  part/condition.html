@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h1>Calculate the Grade</h1>
+Enter the Student Name: <input type="text" id="name"><br /><br />
+Enter the Registration No.: <input type="text" id="reg"><br /><br />
+Enter the Marks Obtained: <input type="text" id="marks"> <br /><br />
+<input type="button" value="Submit" onclick="calculate()">
+
+<script type="text/javascript">
+function calculate()
+{
+var student_name=document.getElementById('name').value;
+var regno=document.getElementById('reg').value;
+var marks=document.getElementById('marks').value;
+var grade;
+if(marks>=90)
+grade='A';
+else if(marks>=80 && marks<90)
+grade='B';
+else if(marks>=70 && marks<80)
+grade='C';
+else if(marks>=60 && marks<70)
+grade='D';
+else if(marks>=50 && marks<60)
+grade='E';
+else
+grade='F';
+alert(student_name+"("+regno+") has obtained grade "+grade);
+}
+</script>
+
+</body>
+</html>

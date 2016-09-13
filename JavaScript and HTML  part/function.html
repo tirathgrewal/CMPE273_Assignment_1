@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+
+<h1>Check if the number is Armstrong or not.</h1>
+Enter the number: <input type="text" id="num" /> <br /><br />
+<input type="button" value= "Submit" onclick ="check()">
+
+<script type="text/javascript">
+function check()
+{
+var numb=document.getElementById('num').value;
+var bool=calculate(numb);
+if(bool){
+alert(numb+" is an armstrong number");
+}
+else{
+alert(numb+" is not an armstrong number");
+}
+}
+function calculate(numb)
+{
+var dig,sum=0;
+var temp=numb;
+while(numb!=0)
+{
+dig = numb%10;
+sum += dig*dig*dig;
+numb = Math.floor(numb/10);
+}
+if(temp==sum){
+return true;
+}
+else{
+return false;
+}
+}
+</script>
+
+</body>
+</html>
+
